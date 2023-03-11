@@ -2,7 +2,7 @@ body{
     margin:0;
     padding:0;
     margin: auto;
-    width: 1600px;
+    width: 1200px;
     font-family: 'Arial Black', Gadget, sans-serif;
     font-size: 20px;
     background: rgba(131, 164, 236, 0.2);
@@ -13,52 +13,84 @@ body{
 }
 
 .meme-container {
-    width: 80%;
     margin: auto;
+}
+.meme-item{
     border-top: 1px solid rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+    min-height: 1em;
+    
 }
 
-.meme-tittle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.title-text {
+    display: inline-block;
+    width: 96%;
+    padding-bottom: 2%;
 }
+.title-checkbox {
+    appearance: none;
+}
+img {
+    display: block;
+    margin: auto;
+}
+.meme-img {
+    visibility: hidden;
+    margin-bottom: 1rem;
+    max-height: 0em;
+    transition: all .4s ease .4s;
+}
+.title-checkbox:checked ~ .meme-img {
+    visibility: visible;
+    max-height: 100em;  
+}
+
+.icon {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition-duration: 300ms;
+}
+.title-checkbox:checked + .icon {
+    transform: rotate(45deg);
+    transition-duration: 300ms;
+}
+
+
+/*
+
 .title-text {
 }
 
-.show-meme {
-    display: none;
-    rotate: 0deg;
-    transition-duration: 300ms;
-}
-.meme-img {
-    display: none;
-    text-align: center;
-}
+*/
+/* for desktop */
+/*
+@media (min-width: 768px){
 
-.meme-container:hover .meme-img {
-    display: block;
+    .meme-container:hover .meme-img {
+        display: block;
+    }
+    .wrapper:hover .title-text {
+        color: blue;
+    }
+    .wrapper:hover .icon {
+        display: block;
+    }
+    .meme-container:hover .title-text {
+        color: black;
+    }
+    .meme-container:hover .icon{
+        rotate: 45deg;
+        transition-duration: 300ms;
+    }
+
+    .meme-container:active .meme-img {
+        opacity: 0.5;
+    }
+    .meme-container:active .title-text {
+        color: blue
+    }
+    .meme-container:active .icon {
+        color: blue
+    }
+
 }
-.wrapper:hover .title-text {
-    color: blue;
-}
-.wrapper:hover .show-meme {
-    display: block;
-}
-.meme-container:hover .title-text {
-    color: black;
-}
-.meme-container:hover .show-meme{
-    rotate: 45deg;
-    transition-duration: 300ms;
-}
-.meme-container:active {
-    color: blue;
-}
-.meme-container:active .meme-img {
-    opacity: 0.5;
-}
-.meme-container:active .title-text {
-    color: blue
-}
+*/

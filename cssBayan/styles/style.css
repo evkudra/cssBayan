@@ -64,12 +64,36 @@ img {
     color: rgb(138, 43, 226)
 }
 
-/*
+/* for tablet 820x1180 px */
 
-.title-text {
+@media (min-width: 321px) {
+    
+    body{
+        width: 51em;
+        font-size: 16px;
+    }
+    .wrapper {
+        width: 35em;
+    }
+    .meme-item{
+       padding-bottom: 0;
+    }
+    .title-text {
+        width: 94%;
+        padding-bottom: 0;
+        min-height: 2em;
+    }
+    img {
+        width: 30em;
+        height: 15em;
+    }
+    .title-checkbox:checked ~ .meme-img {
+        max-height: 15em;
+        margin-bottom: 1em;
+        margin-top: 0.5em;  
+    }
 }
 
-*/
 /* for desktop */
 /*
 @media (min-width: 768px){
